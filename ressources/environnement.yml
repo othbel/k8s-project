@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: project-env
+data:
+  TASKS_AUTH_ADDRESS: "tasks-api-service.default" 
+  USERS_AUTH_ADRESS: "users-api-service.default"
