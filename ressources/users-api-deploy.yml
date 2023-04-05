@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: users-api
-        image: <Image>
+        image: othbel/users-api:1.0.0
         env:
           - name: AUTH_ADDRESS
             valueFrom:

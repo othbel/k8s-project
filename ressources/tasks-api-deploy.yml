@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: tasks-api
-        image: <Image>
+        image: othbel/tasks-api:1.0.0
         env:
           - name: AUTH_ADDRESS
             valueFrom:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: auth-api
-        image: <Image>
+        image: othbel/auth-api:1.0.0
         resources:
           limits:
             memory: "128Mi"
