@@ -21,6 +21,11 @@ spec:
       - name: tasks-api
         image: othbel/tasks-api:1.0.0
         env:
+          - name: TASKS_FOLDER
+            valueFrom:
+              configMapKeyRef:
+                name: project-env
+                key: TASKS_FOLDER
           - name: AUTH_ADDRESS
             valueFrom:
               configMapKeyRef:
