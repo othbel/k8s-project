@@ -12,6 +12,11 @@ spec:
       labels:
         app: tasks-api
     spec:
+      volumes:
+        - name: tasks-api-volume
+          hostPath:
+            path: /tasks
+            type: DirectoryOrCreate
       containers:
       - name: tasks-api
         image: othbel/tasks-api:1.0.0
@@ -21,6 +26,9 @@ spec:
               configMapKeyRef:
                 name: project-env
                 key: TASKS_AUTH_ADDRESS
+        volumeMounts:
+          - mountPath: /app/tasks
+            name: tasks-api-volume
         resources:
           limits:
             memory: "128Mi"
