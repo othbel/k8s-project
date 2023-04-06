@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: project-env
 data:
-  TASKS_AUTH_ADDRESS: "tasks-api-service.default" 
-  USERS_AUTH_ADDRESS: "users-api-service.default"
+  AUTH_ADDRESS: "auth-api-service.default" 
   TASKS_FOLDER: "tasks"

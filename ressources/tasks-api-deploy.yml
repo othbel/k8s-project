@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tasks-api-deploy
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: tasks-api
@@ -30,13 +30,13 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: project-env
-                key: TASKS_AUTH_ADDRESS
+                key: AUTH_ADDRESS
         volumeMounts:
           - mountPath: /app/tasks
             name: tasks-api-volume
         resources:
           limits:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "100m"
         ports:
         - containerPort: 8000
